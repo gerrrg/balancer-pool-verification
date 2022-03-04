@@ -1,4 +1,4 @@
-if [[ -z $GARBAGE_PRIVATE_KEY ]]; then
+if [[ -z $GARBAGE_PRIVATE_KEY ]] || [[ -z $ARG0 ]]; then
 	echo
 	echo "You must set your keys in env/networks.config!"
 	echo
