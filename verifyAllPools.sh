@@ -5,7 +5,6 @@ if [[ -z $GARBAGE_PRIVATE_KEY ]]; then
 	exit 1
 fi
 
-
 # setup (or activate) your virtual environment
 if [ ! -d ./venv ]; then
  	python3 -m venv ./venv
@@ -40,7 +39,6 @@ source $envPath/networks.config
 cp hardhat.config.ts.template hardhat.config.ts
 sed -i -e "s/GARBAGE_PRIVATE_KEY/$GARBAGE_PRIVATE_KEY/g" hardhat.config.ts
 sed -i -e "s/INFURA_API_KEY/$INFURA_API_KEY/g" hardhat.config.ts
-rm hardhat.config.ts-e
 mv hardhat.config.ts balancer-v2-monorepo/pkg/deployments/hardhat.config.ts
 
 if [ ! -d ./balancer-v2-monorepo/pkg/deployments/scripts ]; then
@@ -52,6 +50,5 @@ cd balancer-v2-monorepo/pkg/deployments/
 for f in ./scripts/*.sh; do
   bash "$f" 
 done
-rm balancer-v2-monorepo/pkg/deployments/scripts/*
 
 deactivate
