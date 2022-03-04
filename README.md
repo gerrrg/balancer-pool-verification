@@ -1,5 +1,7 @@
 # balancer-pool-verification
 
+Tested on Ubuntu 20.04 with Python 3.10
+
 ## Usage
 - Edit `./env/networks.config` to add Infura API keys, Etherscan API keys, and a (throwaway) private key.
 - Run `verifyAllPools.sh` to do one pass of pool verification, or run `keepRunning.sh` to continuously verify pools as they're created
