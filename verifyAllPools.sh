@@ -1,3 +1,11 @@
+if [[ -z $GARBAGE_PRIVATE_KEY ]]; then
+	echo
+	echo "You must set your keys in env/networks.config!"
+	echo
+	exit 1
+fi
+
+
 # setup (or activate) your virtual environment
 if [ ! -d ./venv ]; then
  	python3 -m venv ./venv
