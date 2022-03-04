@@ -8,7 +8,7 @@ else
 fi
 
 envPath="./env"
-declare -a networks=("mainnet" "kovan" "polygon" "fantom")
+declare -a networks=("mainnet" "kovan" "polygon") # "fantom")
 for i in "${networks[@]}"
 do
 	cd $envPath
