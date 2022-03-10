@@ -19,7 +19,7 @@ def writeToJson(data, filename, maxRetries = 5):
 			retries += 1;
 def main():
 
-	networks = ["mainnet", "kovan", "polygon", "fantom"];
+	networks = ["mainnet", "kovan", "polygon", "fantom", "goerli", "rinkeby"];
 	verbose = False;
 
 	if len(sys.argv) < 2:
